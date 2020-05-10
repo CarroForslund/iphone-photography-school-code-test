@@ -1,0 +1,126 @@
+/* Popup bg */
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 38, 38, 0.8); /* #262626 opacity 0.8 */
+    mix-blend-mode: normal;
+}
+
+.popup {
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    width: 570px;
+    margin: 0 auto;
+    padding: 18px 65px 38px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
+    @media #{$break-narrow} {
+        width: 90%;
+        height: auto;
+        padding: 18px;
+    }
+}
+
+#x {
+    @extend %font;
+    margin: -18px -54px 0 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    float: right;
+    cursor: pointer;
+    color: $color-secondary-font;
+    @media #{$break-narrow} {
+        margin: -18px 0 0 0;
+    }
+}
+
+.steps {
+    @extend %font;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-top: 0;
+    color: $grey;
+}
+
+.line {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, $color-primary-gradient-start 0%, $color-primary-gradient-end 50%, rgba(229,229,229,1) 50%);
+    &2 {
+        background: linear-gradient(90deg, rgba(229,229,229,1) 50%, $color-primary-gradient-start 50%, $color-primary-gradient-end 100%);
+    }
+}
+
+form > div {
+    position: relative;
+}
+
+form > div > label {
+    @extend %font;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #828282;
+    transition: 0.2s;
+}
+
+form input {
+    @extend %font;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 4px;
+    width: 100%;
+    height: 54px;
+    margin-bottom: 21px;
+    padding: 16px;
+    background: $white;
+    box-shadow: inset 0px 1px 5px $dark-grey;
+}
+
+form input:focus + label,
+form input:valid + label {
+    top: 8px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+form input:focus {
+    border: 1px solid $grey;
+    outline: none;
+}
+
+/* Please enter your email here */
+.rectangle input-placeholder {
+    @extend %font;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #828282;
+}
+
+/* Please enter a valid email */
+.error .rectangle {
+    border-color: $color-error;
+    color: $color-error;
+}
+
+.error label {
+    color: $color-error;
+}

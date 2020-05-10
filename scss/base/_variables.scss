@@ -1,0 +1,26 @@
+// Descriptive color variables
+$white      : #fff;
+$black      : #101010;
+$dark-grey  : #464646;
+$grey       : #848484;
+$light-grey : #F5F5F5;
+$tapestry   : #AC519C;
+$amaranth   : #E5424F;
+$bouquet    : #B678AA;
+$tonys-pink : #E28990;
+$crimson    : #E51323;
+
+// Functional color variables
+$color-primary-gradient-start : $tapestry;
+$color-primary-gradient-end : $amaranth;
+
+$color-secondary-gradient-start : $bouquet ;
+$color-secondary-gradient-end : $tonys-pink;
+
+$color-primary-font : $black;
+$color-secondary-font : $dark-grey;
+
+$color-error : $crimson; 
+
+// Media query breakpoints
+$break-narrow : '(max-width: 900px)';

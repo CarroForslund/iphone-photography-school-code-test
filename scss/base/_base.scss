@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @media #{$break-narrow} {
+        margin: 18px;
+    }
+}
+
+h1 {
+    @extend %heading;
+    @include text(26px, $l-height: 31px);
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: $color-primary-font;   
+}
+
+h2 {
+    @extend %heading;
+    @include text(18px, $l-height: 22px);
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-primary-font;
+}
+
+h3 {
+    @extend %heading;
+    @include text(23px, $l-height: 28px);
+    margin-top: 22px;
+    text-align: center;
+    color: $color-secondary-font;
+    @media #{$break-narrow} {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+p {
+    @include text(16px, 300, 24px);
+    font-family: Lato, sans-serif;
+    font-style: normal;
+    color: $color-primary-font;
+}
+
+hr {
+    margin-top: 0;
+    height: 1px;
+    background: linear-gradient(90deg, $color-primary-gradient-start 0.83%, #E5424F 100%);
+    border: none;
+}
+
+img {
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+    @media #{$break-narrow} {
+        width: 100vw;
+        height: auto;
+        margin: 0 0 0 -18px; 
+    }
+}
